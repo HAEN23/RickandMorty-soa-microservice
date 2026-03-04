@@ -1,8 +1,8 @@
 import express from 'express';
-import { config } from './config/env';
-import { corsMiddleware } from './middlewares/cors';
-import { errorHandler } from './middlewares/errorHandler';
-import gatewayRoutes from './routes/gatewayRoutes';
+import { config } from './config/env.js';
+import { corsMiddleware } from './middlewares/cors.js';
+import { errorHandler } from './middlewares/errorHandler.js';
+import gatewayRoutes from './routes/gatewayRoutes.js';
 
 const app = express();
 
@@ -18,5 +18,5 @@ app.use(errorHandler);
 
 // 4. Inicializar servidor
 app.listen(config.port, () => {
-  console.log(`🛡️  API Gateway enrutando de forma segura en http://localhost:${config.port}`);
+  console.log(`API Gateway enrutando de forma segura en http://localhost:${config.port}`);
 });

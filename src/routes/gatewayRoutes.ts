@@ -3,7 +3,7 @@ import { forwardToMicroservice } from '../services/proxyService';
 
 const router = Router();
 
-router.get('/api/pokemon/:name', async (req: Request, res: Response, next: NextFunction) => {
+router.get('/api/character/:name', async (req: Request, res: Response, next: NextFunction) => {
   try {
    
     const name = req.params.name as string;

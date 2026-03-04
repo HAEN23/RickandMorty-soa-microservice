@@ -2,8 +2,9 @@
   "name": "poke-soa-gateaway",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
+    "dev": "tsx watch src/index.ts",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
@@ -27,6 +28,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.3"
   }
 }

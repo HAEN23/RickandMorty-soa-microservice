@@ -2,7 +2,7 @@ import axios from 'axios';
 import { config } from '../config/env';
 
 export const forwardToMicroservice = async (pokemonName: string) => {
-  // Construimos la URL hacia el Repo 3
+  // URL hacia el Repo 3
   const targetUrl = `${config.microserviceUrl}/${pokemonName}`;
   
   // Hacemos la petición y devolvemos la data tal cual llegue
