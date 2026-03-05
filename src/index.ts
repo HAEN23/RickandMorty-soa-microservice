@@ -16,7 +16,7 @@ app.use(gatewayRoutes);
 // Manejo de errores 
 app.use(errorHandler);
 
-// 4. Inicializar servidor
+//  Inicializar servidor
 app.listen(config.port, () => {
   console.log(`API Gateway enrutando de forma segura en http://localhost:${config.port}`);
 });

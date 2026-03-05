@@ -7,7 +7,7 @@ export const errorHandler = (err: any, req: Request, res: Response, next: NextFu
   
   if (status === 404) {
     return res.status(404).json({ 
-      mensaje: "El Pokémon no fue encontrado en nuestros registros." 
+      mensaje: "El Personaje no fue encontrado en nuestros registros." 
     });
   }
 
