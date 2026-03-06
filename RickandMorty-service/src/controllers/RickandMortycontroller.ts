@@ -4,7 +4,7 @@ import { CharacterService } from '../services/RickandMorty.service.js';
 const characterService = new CharacterService();
 
 export class CharacterController {
-  // GET /api/v1/character - Obtener todos los personajes con pag inación y filtros
+  //  Obtener todos los personajes con pag inación y filtros
   async getAllCharacters(req: Request, res: Response): Promise<void> {
     try {
       const page = parseInt(req.query.page as string) || 1;
@@ -39,7 +39,7 @@ export class CharacterController {
     }
   }
 
-  // GET /api/v1/character/:id - Obtener personaje por ID
+  //Obtener personaje por ID
   async getCharacterById(req: Request, res: Response): Promise<void> {
     try {
       const id = parseInt(req.params.id as string);
@@ -76,7 +76,7 @@ export class CharacterController {
     }
   }
 
-  // GET /api/v1/character/name/:name - Obtener personaje por nombre
+  // Obtener personaje por nombre
   async getCharacterByName(req: Request, res: Response): Promise<void> {
     try {
       const name = req.params.name as string;
@@ -104,7 +104,7 @@ export class CharacterController {
     }
   }
 
-  // POST /api/v1/character - Crear nuevo personaje
+  // Crear nuevo personaje
   async createCharacter(req: Request, res: Response): Promise<void> {
     try {
       const characterData = req.body;
@@ -136,7 +136,7 @@ const character = await characterService.createCharacter(characterData);
     } catch (error: any) {
       console.error('Error al crear personaje:', error);
       
-      if (error.code === '23505') { // Código de PostgreSQL para violación de unicidad
+      if (error.code === '23505') { 
         res.status(409).json({
           success: false,
           message: 'Ya existe un personaje con ese api_id o nombre'

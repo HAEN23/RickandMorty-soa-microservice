@@ -4,7 +4,7 @@ import { CharacterController } from '../controllers/RickandMortycontroller.js';
 const router = Router();
 const characterController = new CharacterController();
 
-// Rutas de personajes de Rick and Morty
+
 router.get('/', (req, res) => characterController.getAllCharacters(req, res));
 router.get('/stats', (req, res) => characterController.getStats(req, res));
 router.get('/species/:species', (req, res) => characterController.getCharactersBySpecies(req, res));

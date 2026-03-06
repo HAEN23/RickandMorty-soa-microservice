@@ -274,15 +274,15 @@ export class CharacterService {
     
     const character = characterResult.rows[0];
     
-    // Obtener origin location
+    
     const originResult = await pool.query('SELECT * FROM locations WHERE id = $1', [character.origin_id]);
     const origin = originResult.rows[0] || null;
     
-    // Obtener current location
+    
     const locationResult = await pool.query('SELECT * FROM locations WHERE id = $1', [character.location_id]);
     const location = locationResult.rows[0] || null;
     
-    // Obtener episodios
+    
     const episodesResult = await pool.query(
       `SELECT e.* FROM episodes e
        JOIN character_episodes ce ON e.id = ce.episode_id

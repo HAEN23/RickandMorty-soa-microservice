@@ -1,4 +1,4 @@
-// Interfaces de modelos de datos para Rick and Morty
+
 
 export interface Location {
   id: number;
