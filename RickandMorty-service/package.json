@@ -1,7 +1,7 @@
 {
-  "name": "pokemon-service",
+  "name": "rick-morty-microservice",
   "version": "1.0.0",
-  "description": "Microservicio de Pokemon con lógica de negocio y conexión a PostgreSQL",
+  "description": "Microservicio de Rick and Morty con logica de negocio y conexion a PostgreSQL",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
